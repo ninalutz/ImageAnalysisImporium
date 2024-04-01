@@ -16,8 +16,12 @@ This image folder has 4 types of subfolders for testing:
 This folder also has a test grid of Stable Diffusion images to test a grid parser helper script.
 
 ## Script Descriptions 
-avg.py - Katie Arriaga, Nina Lutz 
-ocr_batch.py - Wilson Chen, Nina Lutz
-edges.py - Zayna Lughod, Nina Lutz
-gridparse.py - Nina Lutz
-colorquant.py - Jordyn Padzensky
+#### avg.py - Katie Arriaga, Nina Lutz 
+This script takes in a collection of images and outputs the average of them, centering and scaling images of different sizes together. This utilizes a composite methodology to give an overall summation of a collection of images.
+
+#### ocr_batch.py - Wilson Chen, Nina Lutz
+
+#### edges.py - Zayna Lughod, Nina Lutz
+This script takes in images and outputs their Canny edges
+#### gridparse.py - Nina Lutz
+#### colorquant.py - Jordyn Padzensky
