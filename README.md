@@ -5,7 +5,10 @@ A set of scripts authored by myself and my students at the University of Washing
 The scripts that are cleaned and ready for use are at the main level directory of this repository. 
 
 ### testing_scripts
-These are for scripts that are actively being tweaked and developed by students or myself and are not meant for further use. 
+These are for scripts that are actively being tweaked and developed by students or myself and are not meant for further use at the moment.
+
+## spring_quarter
+These are active development scripts for the Spring Quarter DRG
 
 ### test_images
 This image folder has 4 types of subfolders for testing:
@@ -20,8 +23,11 @@ This folder also has a test grid of Stable Diffusion images to test a grid parse
 This script takes in a collection of images and outputs the average of them, centering and scaling images of different sizes together. This utilizes a composite methodology to give an overall summation of a collection of images.
 
 #### ocr_batch.py - Wilson Chen, Nina Lutz
+This script takes in a collection of images and outputs a CSV with their text and extracts text from each
 
-#### edges.py - Zayna Lughod, Nina Lutz
-This script takes in images and outputs their Canny edges
+#### edges.py and edges_batch.py - Zayna Lughod, Nina Lutz
+This script takes in images and outputs their Canny edges. The batch version does this for a batch of images and resaves them.
+
 #### gridparse.py - Nina Lutz
-#### colorquant.py - Jordyn Padzensky
+This script allows for a user to split an image from a grid into separate images
+
