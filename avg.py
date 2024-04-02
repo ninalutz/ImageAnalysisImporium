@@ -13,8 +13,8 @@ from PIL import Image
 import os
 
 #add input and output folders for resizing
-input_folder_name = "test_images/test_collection"
-output_folder_name = "test_images/test_collection/resized"
+input_folder_name = "test_images/test_collection_border"
+output_folder_name = "test_images/test_collection_border/resized"
 
 # Function to find the largest dimensions of withing a set of images
 def find_largest_image_size(image_files):
