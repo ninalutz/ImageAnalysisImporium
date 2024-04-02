@@ -1,5 +1,10 @@
 """
-Authored by Jordyn Padzensky 
+Authored by Jordyn Padzensky and Nina Lutz
+
+TODO:
+Finish monk skintone bucketing
+Finish exporting palette
+Adopt for batching
 """
 # import the necessary packages
 from sklearn.cluster import MiniBatchKMeans 
@@ -16,8 +21,7 @@ import itertools
 import matplotlib.colors as mcolors 
 import colorsys
 
-filename = "test_images/"
-filename += "line1.jpg" #add your image name here
+filename = "test_images/test_collection_border/13.jpeg"
 num_clusters = 5
 
 def rgb_to_hsv(r, g, b):
@@ -48,7 +52,6 @@ w = image.width
 h = image.height
 
 # grab each pixel, convert to hsv, and add to a list.
-
 def pixels_rgb_list(in_list, h, w) :
     for y in range(0, h):
         for x in range(0, w):
@@ -63,7 +66,6 @@ for x in rgbList:
   pixelHSV = rgb_to_hsv(x[0], x[1], x[2])
   hsvList.append(pixelHSV)
 
-
 clt = MiniBatchKMeans(num_clusters)
 clt.fit(hsvList)
 clusterCenters = list(clt.cluster_centers_)
@@ -72,6 +74,7 @@ clusterCenters = list(clt.cluster_centers_)
 fig = plt.figure()
 ax = fig.add_subplot(projection='3d')
 cols = []
+
 # plotting the points
 pts = []
 for i in range(0, len(hsvList)):
@@ -85,15 +88,19 @@ for p_i in range(len(pts)):
     c = cols[p_i]
     ax.scatter(p[0], p[1], p[2], zdir='z', c=(c[0]/255, c[1]/255, c[2]/255), s=3)
 
+rgb_palette = []
+
 for col in clusterCenters:
-  print(col)
   r, g, b = colorsys.hsv_to_rgb(col[0]/360, col[1]/100, col[2]/100)
+  rgb_palette += [r, g, b]
   ax.scatter(col[0], col[1], col[2], zdir='z', c=(r, g, b),edgecolors= "lawngreen", s=150)
 
 ax.legend()
 ax.set_xlim3d(0, 360) #H = 0-360
 ax.set_ylim3d(0, 100) # S = 1-100
 ax.set_zlim3d(0, 100) # V = 1-100
+
+print(rgb_palette)
 
 plt.show()
 plt.savefig('plot-15.png')
