@@ -1,6 +1,9 @@
 """
 Authored by Katie Arriaga in W24 DRG 
 Small edit to support multiple inputs by Nina Lutz
+
+Takes in a folder of images and outputs the average image
+Via composite imagery 
 """
 import glob
 import sys

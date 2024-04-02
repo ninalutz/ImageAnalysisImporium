@@ -1,3 +1,6 @@
+"""
+Authored by Jordyn Padzensky 
+"""
 # import the necessary packages
 from sklearn.cluster import MiniBatchKMeans 
 import numpy as np
