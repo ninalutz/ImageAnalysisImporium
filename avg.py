@@ -82,6 +82,7 @@ def adjust_images(input_images, output_folder_name):
 
 # Main routine
 
+##TODO- Need to limit this regex to be NOT videos and NOT GIFS
 # Read the stream of all the images in the sample
 input_images = glob.glob(input_folder_name + '/*.*')
 
