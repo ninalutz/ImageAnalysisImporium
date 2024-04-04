@@ -1,6 +1,8 @@
 # ImageAnalysisImporium
 A set of scripts authored by myself and my students at the University of Washington for ongoing work in image analysis. This folder is in use for our Directed Research Group around problematic imagery at the US Mexico land border. 
 
+Changes for spring quarter
+
 ## Folder Structure
 The scripts that are cleaned and ready for use are at the main level directory of this repository. 
 
