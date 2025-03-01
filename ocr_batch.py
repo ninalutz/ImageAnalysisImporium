@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 """
 Script authored by Wilson Chen for Winter 24 DRG
 Edits by Nina Lutz 
@@ -142,3 +143,5 @@ def main():
 if __name__ == '__main__':
     main()
 
+=======
+>>>>>>> Stashed changes

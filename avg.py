@@ -1,9 +1,6 @@
 """
 Authored by Katie Arriaga in W24 DRG 
 Small edit to support multiple inputs by Nina Lutz
-
-Takes in a folder of images and outputs the average image
-Via composite imagery 
 """
 import glob
 import sys
@@ -13,8 +10,8 @@ from PIL import Image
 import os
 
 #add input and output folders for resizing
-input_folder_name = "test_images/test_collection_border"
-output_folder_name = "test_images/test_collection_border/resized"
+input_folder_name = "test_images/test_collection"
+output_folder_name = "test_images/test_collection/resized"
 
 # Function to find the largest dimensions of withing a set of images
 def find_largest_image_size(image_files):
@@ -82,7 +79,6 @@ def adjust_images(input_images, output_folder_name):
 
 # Main routine
 
-##TODO- Need to limit this regex to be NOT videos and NOT GIFS
 # Read the stream of all the images in the sample
 input_images = glob.glob(input_folder_name + '/*.*')
 
